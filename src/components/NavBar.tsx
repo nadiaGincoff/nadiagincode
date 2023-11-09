@@ -2,15 +2,16 @@
 import Link from 'next/link';
 import React from 'react';
 import { usePathname  } from 'next/navigation';
+import { useIsClient } from '@/context/isClient';
 
 const NavBar = () => {
+    const isClient = useIsClient();
     const pathname  = usePathname();
-
     const isButtonActive = (route:string) => {
       return pathname === route ? 'bg-buttonbeige' : '';
     }   
 
-    changeBgColorOnScroll();
+    if (isClient) changeBgColorOnScroll();
     
     return (
       <div id="backgroundColorNav" className='w-auto rounded-full my-5 relative top-0 link-transition backdrop-blur-sm'>
