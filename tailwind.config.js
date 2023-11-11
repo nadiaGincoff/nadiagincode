@@ -12,7 +12,7 @@ module.exports = {
     extend: {
       screens: {
         sm: '375px',
-        md: '768px',
+        md: '820px',
         lg: '976px',
         xl: '1440px',
       },
@@ -37,6 +37,7 @@ module.exports = {
         'darkgreen': '#025a4e',
         'secondary': '#4c6763',
         'white': '#f4f3f0',
+        'primaryaccent': 'hsla(0, 0%, 100%, 1)'
       },
     },
   },
