@@ -1,9 +1,13 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { GeistSans, GeistMono } from 'geist/font'
-import NavBar from '@/components/NavBar'
-import './globals.scss'
+import { GeistSans } from 'geist/font/sans'
+import { GeistMono } from 'geist/font/mono'
+
+import NavBar from './components/NavBar'
 import { IsClientContextProvider } from '@/context/isClient'
+
+import {Providers} from "./providers";
+import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,13 +26,15 @@ export default function RootLayout({
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body className={`${inter.className} gradient-bg`}>
         <IsClientContextProvider>
-          <header id="header-ng" className='flex flex-row items-center justify-center w-full sticky z-100 top-0'>
-            <NavBar />
-          </header>
-          <section>
-            {children} 
-          </section> 
-          <footer className="h-60 w-full bg-darkgreen mt-20 flex justify-center items-center text-white text-bold text-lg">nadia.gincoff@gmail.com</footer>
+          <Providers>
+            <header id="header-ng" className='flex flex-row items-center justify-center w-full sticky z-100 top-0'>
+              <NavBar />
+            </header>
+            <section>
+              {children} 
+            </section> 
+            <footer className="h-60 max-w-screen-lg mt-20 flex justify-center items-center text-darkgreen text-normal text-lg">© 2023 Nadia Malena Gincoff</footer>
+          </Providers>
         </IsClientContextProvider>
       </body>
     </html>

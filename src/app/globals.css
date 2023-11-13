@@ -27,32 +27,8 @@ body {
   transition: background-color 0.5s ease, color 0.3s ease;
 }
 
-
 .gradient-bg {
   width: 100vw;
   height: 100%;
   background: var(--color-bg1);
-}
-
-.spotlight {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  pointer-events: none;
-  transition: transform 0.1s ease-out, border 0.1s ease-out;
-}
-
-.highlight {
-  position: relative;
-  padding: 20px;
-  background-color: #3498db;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s ease-out;
-}
-
-.highlight:hover {
-  background-color: #2980b9;
 }

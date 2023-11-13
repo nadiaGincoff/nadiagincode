@@ -14,8 +14,8 @@ const NavBar = () => {
     if (isClient) changeBgColorOnScroll();
     
     return (
-      <div id="backgroundColorNav" className='w-auto rounded-full my-5 relative top-0 link-transition backdrop-blur-sm z-30'>
-        <ul className="flex flex-wrap text-md font-semibold text-center text-secondary w-auto p-3">
+      <div id="backgroundColorNav" className='w-auto rounded-full my-5 relative top-0 link-transition backdrop-blur-sm'>
+        <ul className="flex flex-wrap text-md font-semibold text-center text-secondary w-auto p-3 z-[900]">
           <li className="sm:mr-1 md:mr-2">
             <Link href={'/'}>
               <button 
