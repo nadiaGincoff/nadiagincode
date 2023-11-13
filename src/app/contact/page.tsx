@@ -3,10 +3,10 @@ import ContactForm  from './ContactForm';
 export default function Contact() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <article className='lg:max-w-screen-xl w-full bg-white md:rounded-[64px] sm:p-8 md:px-32 md:py-32 mt-20 flex sm:flex-col md:flex-col lg:flex-row gap-8 items-center justify-center'>
+      <article className="lg:max-w-screen-xl w-full bg-white md:rounded-[64px] sm:p-8 md:px-32 md:py-32 mt-20 flex sm:flex-col md:flex-col lg:flex-row gap-8 items-center justify-center">
         <div className="flex flex-col sm:w-full lg:w-1/2 gap-5">
           <h1 className="antialiased hover:subpixel-antialiased tracking-tighter font-mono font-extrabold sm:text-3xl md:text-5xl lg:text-6xl text-secondary ">Get in <span className="text-darkgreen">Touch</span></h1>
-          <p className='font-sans text-secondary sm:text-md md:text-xl font-normal leading-relaxed tracking-wide'>Let's chat about how I can bring value to your team and collaborate on something extraordinary. Reach out and let's make the tech world a little more awesome together!</p>
+          <p className="font-sans text-secondary sm:text-md md:text-xl font-normal leading-relaxed tracking-wide">{`Let's chat about how I can bring value to your team and collaborate on something extraordinary. Reach out and let's make the tech world a little more awesome together!`}</p>
           <ContactForm />
         </div>
           <iframe 
