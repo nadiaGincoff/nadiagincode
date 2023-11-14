@@ -5,7 +5,7 @@ import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 
-import ProfilePicture from '../../public/profilepicture.jpg';
+import ProfilePicture from '../../public/profilepicture.jpeg';
 import CordilleraPicture from '../../public/precordillera.jpg';
 import PacificPicture from '../../public/pacifico.jpg';
 import SectionDivider from '../components/SectionDivider';
