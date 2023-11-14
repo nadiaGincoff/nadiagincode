@@ -8,9 +8,9 @@ import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import ProfilePicture from '../../public/profilepicture.jpg';
 import CordilleraPicture from '../../public/precordillera.jpg';
 import PacificPicture from '../../public/pacifico.jpg';
-import SectionDivider from './components/SectionDivider';
+import SectionDivider from '../components/SectionDivider';
 
-const skills: string[] = [ 'JavaScript', 'React.JS', 'Node.JS', 'MySQL', 'Sequelize', 'sqlite', 'Postgresql', 'AWS', 'Ant-design', 'styled-system', 'styled-components', 'Team-Viewer', 'Bitbucket', 'Jira', 'Notion']
+const skills: string[] = [ 'JavaScript', 'React.JS', 'TypeScript', 'Node.JS', 'MySQL', 'Sequelize', 'sqlite', 'Postgresql', 'AWS', 'Ant-design', 'styled-system', 'styled-components', 'Team-Viewer', 'Bitbucket', 'Jira', 'Notion']
 
 function TechSkill({ skillName }: { skillName: string}) {
   return (
@@ -127,11 +127,16 @@ export default function Home() {
         >
           <h1 className="antialiased hover:subpixel-antialiased tracking-tighter font-mono font-extrabold sm:text-3xl md:text-2xl lg:text-6xl text-darkgreen">Experience</h1>
           <p className='font-sans text-secondary sm:text-md md:text-xl font-normal leading-relaxed tracking-wide mt-5'>
-            {`Back in 2012, I decided to try my hand at creating custom Tumblr themes and tumbled head first into the rabbit hole of coding and web development. Fast-forward to today, and I’ve had the privilege of building software for an advertising agency, a start-up, a student-led design studio, and a huge corporation.
-
-            My main focus these days is building products and leading projects for our clients at Upstatement. In my free time I've also released an online video course that covers everything you need to know to build a web app with the Spotify API.
-
-            When I’m not at the computer, I’m usually rock climbing, hanging out with my wife and two cats, or running around Hyrule searching for Korok seedsKorok seeds.`}
+            <span>Embarking on the journey of programming during my childhood, my initial exposure involved crafting signatures in Photoshop for online forums. It was a playful introduction to HTML, a language I had yet to realize would shape the trajectory of my future profession.</span>
+            <br />
+            {`
+              I've had the privilege of contributing to the creation of software that extends a helping hand within the walls of hospitals and the administrative corridors of municipalities. This experience has instilled in me a deep appreciation for the tangible impact that technology can have on people's lives.
+              `
+            }
+            <br />
+            <span>
+              The recent chapters of my learning journey have been dedicated to Linux, Shell Scripting, Docker, and starting to know the intricate world of Python.
+            </span>
            </p>
 
           <div>

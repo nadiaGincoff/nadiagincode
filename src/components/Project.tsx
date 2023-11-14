@@ -1,6 +1,6 @@
 'use client'
 import Lottie from 'react-lottie-player'
-import lottieJson from '../../../public/underconstruction.json'
+import lottieJson from '../../public/underconstruction.json'
 
 export default function Project() {
   return (
