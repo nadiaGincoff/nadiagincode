@@ -19,8 +19,11 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: #ede7de; 
+  color: white;
+  background: #364442; 
+  margin: 0px;
+  overflow: hidden; /* Hide scrollbars */
+  cursor: wait;
 }
 
 .link-transition {
@@ -32,3 +35,6 @@ body {
   height: 100%;
   background: var(--color-bg1);
 }
+
+
+
