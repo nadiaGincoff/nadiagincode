@@ -56,37 +56,37 @@ export default function SlidingImages() {
     return (
         <div ref={container} className={styles.slidingImages}>
             <motion.div style={{x: x1}} className={styles.slider}>
-                    {
-                        slider1.map( (project, index) => {
-                            return <div key={index} className={styles.project} style={{backgroundColor: project.color}} >
-                                <div className={styles.imageContainer}>
-                                    <Image 
+                {
+                    slider1.map( (project, index) => {
+                        return <div key={index} className={styles.project} style={{backgroundColor: project.color}} >
+                            <div className={styles.imageContainer}>
+                                <Image 
+                                fill={true}
+                                sizes="100vw"
+                                alt={"image"}
+                                src={`/images/${project.src}`}/>
+                            </div>
+                        </div>
+                    })
+                }
+            </motion.div>
+            <motion.div style={{x: x2}} className={styles.slider}>
+                {
+                    slider2.map( (project, index) => {
+                        return <div key={index} className={styles.project} style={{backgroundColor: project.color}}>
+                            <div key={index} className={styles.imageContainer}>
+                                <Image 
                                     fill={true}
-                                    sizes="100vw"
                                     alt={"image"}
                                     src={`/images/${project.src}`}/>
                                 </div>
                             </div>
-                        })
-                    }
-                </motion.div>
-                <motion.div style={{x: x2}} className={styles.slider}>
-                    {
-                        slider2.map( (project, index) => {
-                            return <div key={index} className={styles.project} style={{backgroundColor: project.color}} >
-                                <div key={index} className={styles.imageContainer}>
-                                    <Image 
-                                    fill={true}
-                                    alt={"image"}
-                                    src={`/images/${project.src}`}/>
-                                </div>
-                            </div>
-                        })
-                    }
-                </motion.div>
-                <motion.div style={{height}} className={styles.circleContainer}>
-                    <div className={styles.circle}></div>
-                </motion.div>
+                    })
+                }
+            </motion.div>
+            <motion.div style={{height}} className={styles.circleContainer}>
+                <div className={styles.circle}></div>
+            </motion.div>
         </div>
     )
 }

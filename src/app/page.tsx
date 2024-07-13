@@ -29,9 +29,9 @@ useEffect( () => {
 
   return (
     <main>
-      {/* <AnimatePresence mode='wait'>
-        {isLoading && <Preloader />}
-      </AnimatePresence> */}
+      <AnimatePresence mode='wait'>
+        {isLoading && <div className='flex justify-center items-center h-screen'><h2>wait pplis</h2></div>}
+      </AnimatePresence>
       <Landing />
       <Description />
       <Projects />

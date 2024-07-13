@@ -18,14 +18,6 @@
   }
 }
 
-body {
-  color: white;
-  background: #364442; 
-  margin: 0px;
-  overflow: hidden; /* Hide scrollbars */
-  cursor: wait;
-}
-
 .link-transition {
   transition: background-color 0.5s ease, color 0.3s ease;
 }
@@ -37,4 +29,17 @@ body {
 }
 
 
+body{
+  margin: 0px;
+  background: #364442; 
+  color: var(--color-bg1);
+  overflow: hidden;
+/* Hide scrollbars */
+  cursor: wait;
+}
 
+@media (max-width: 1024px) {
+  body {
+    overflow: visible;
+  }
+}
