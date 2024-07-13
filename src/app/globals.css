@@ -8,6 +8,13 @@
   --background-end-rgb: 255, 255, 255;
   --color-bg1: #ede7de; 
   --color-bg2: hsl(113.33deg 22.5% 84.31%);
+  --background: #364442;
+  --beige: #ede7de;
+  --buttonbeige: #f6f3ee;
+  --darkgray: #364442;
+  --darkgreen: #025a4e;
+  --secondary: #4c6763;
+  --white: #f4f3f0;
 }
 
 @media (prefers-color-scheme: light) {
@@ -31,7 +38,7 @@
 
 body{
   margin: 0px;
-  background: #364442; 
+  background: var(--background); 
   color: var(--color-bg1);
   overflow: hidden;
 /* Hide scrollbars */

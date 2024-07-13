@@ -1,44 +1,52 @@
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import styles from './style.module.scss';
-import Image from 'next/image';
+import { FaNode } from "react-icons/fa";
+import { RiReactjsFill } from "react-icons/ri";
+import { SiTypescript } from "react-icons/si";
+import { SiTailwindcss } from "react-icons/si";
+import { SiMysql } from "react-icons/si";
+import { SiMongodb } from "react-icons/si";
+import { SiFirebase } from "react-icons/si";
+import { SiGit } from "react-icons/si";
 
 const slider1 = [
     {
-        color: "#e3e5e7",
-        src: "profile-picture-.jpg"
+        color: "#e1dad6",
+        icon: <FaNode className='sm:text-5xl md:text-[10rem] lg:text-[20rem]' color="var(--darkgray)" />
     },
     {
         color: "#d6d7dc",
-        src: "profile-picture-.jpg"
+        icon: <RiReactjsFill className='sm:text-5xl md:text-[10rem] lg:text-[20rem]' color="var(--secondary)" />
     },
     {
-        color: "#e3e3e3",
-        src: "profile-picture-.jpg"
+        color: "var(--beige)",
+        icon: <SiTypescript className='sm:text-5xl md:text-[10rem] lg:text-[20rem]' color="var(--darkgreen)" />
     },
     {
-        color: "#21242b",
-        src: "profile-picture-.jpg"
+        color: "var(--beige)",
+        icon: <SiGit className='sm:text-5xl md:text-[10rem] lg:text-[20rem]' color="var(--secondary)" />
     }
 ]
 
 const slider2 = [
     {
-        color: "#d4e3ec",
-        src: "profile-picture-.jpg"
+        color: "var(--color-bg2)",
+        icon: <SiTailwindcss className='sm:text-5xl md:text-[10rem] lg:text-[20rem]' color="var(--secondary)" />
     },
-    {
+    {       
         color: "#e5e0e1",
-        src: "profile-picture-.jpg"
+        icon: <SiMysql className='sm:text-5xl md:text-[10rem] lg:text-[20rem]' color="var(--secondary)" />
     },
     {
-        color: "#d7d4cf",
-        src: "profile-picture-.jpg"
+        color: "var(--darkgray)",
+        icon: <SiFirebase className='sm:text-5xl md:text-[10rem] lg:text-[20rem]' color="var(--beige)" />
     },
     {
         color: "#e1dad6",
-        src: "profile-picture-.jpg"
-    }
+        icon: <SiMongodb className='sm:text-5xl md:text-[10rem] lg:text-[20rem]' color="var(--darkgreen)" />
+    },
+    
 ]
 
 export default function SlidingImages() {
@@ -60,11 +68,7 @@ export default function SlidingImages() {
                     slider1.map( (project, index) => {
                         return <div key={index} className={styles.project} style={{backgroundColor: project.color}} >
                             <div className={styles.imageContainer}>
-                                <Image 
-                                fill={true}
-                                sizes="100vw"
-                                alt={"image"}
-                                src={`/images/${project.src}`}/>
+                                {project.icon}
                             </div>
                         </div>
                     })
@@ -75,12 +79,9 @@ export default function SlidingImages() {
                     slider2.map( (project, index) => {
                         return <div key={index} className={styles.project} style={{backgroundColor: project.color}}>
                             <div key={index} className={styles.imageContainer}>
-                                <Image 
-                                    fill={true}
-                                    alt={"image"}
-                                    src={`/images/${project.src}`}/>
-                                </div>
+                                {project.icon}
                             </div>
+                        </div>
                     })
                 }
             </motion.div>
