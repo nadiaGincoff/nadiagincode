@@ -48,13 +48,13 @@ export default function Home() {
 
   return (
     <motion.main variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
-      <Image 
+      {/* <Image 
         src="/images/pacifico.jpg"
         fill={true}
         alt="background"
         quality={100}
         sizes="100vw"
-      />
+      /> */}
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
           <p ref={firstText}>Nadia Gincoff -</p>

@@ -33,7 +33,7 @@ useEffect( () => {
         {isLoading && <div className='flex justify-center items-center h-screen'><h2>wait pplis</h2></div>}
       </AnimatePresence>
       <Landing />
-      <Description />
+      <Description /> 
       <Projects />
       <SlidingImages />
       <Contact />
