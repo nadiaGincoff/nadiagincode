@@ -2,10 +2,9 @@ import styles from './style.module.scss';
 import Image from 'next/image';
 import Rounded from '../../common/RoundedButton';
 import { useRef } from 'react';
-import { useScroll, motion, useTransform, useSpring } from 'framer-motion';
+import { useScroll, motion, useTransform } from 'framer-motion';
 import Magnetic from '../../common/Magnetic';
 import { useState } from 'react';
-import Toast from '../../common/Toast';
 
 export default function Contact() {
     const container = useRef(null);

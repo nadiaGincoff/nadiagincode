@@ -1,11 +1,15 @@
 'use client'
-import Image from 'next/image'
+import dynamic from 'next/dynamic';
 import styles from './style.module.scss'
 import { useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { slideUp } from './animation';
 import { motion } from 'framer-motion';
+
+const Scene = dynamic(() => import('../../components/Scene'), {
+  ssr: false,
+});
 
 export default function Home() {
 
@@ -48,13 +52,6 @@ export default function Home() {
 
   return (
     <motion.main variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
-      {/* <Image 
-        src="/images/pacifico.jpg"
-        fill={true}
-        alt="background"
-        quality={100}
-        sizes="100vw"
-      /> */}
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
           <p ref={firstText}>Nadia Gincoff -</p>
@@ -62,9 +59,12 @@ export default function Home() {
         </div>
       </div>
       <div data-scroll data-scroll-speed={0.1} className={styles.description}>
-        <p>♦</p>
+        <p className='text-[#ede7de]'>♦</p>
         <p>Full Stack Developer</p>
+      </div>
+      <div className={styles.scene}>
+        <Scene />
       </div>
     </motion.main>
   )
-}
+} 
